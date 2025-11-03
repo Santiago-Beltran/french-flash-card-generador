@@ -40,7 +40,7 @@ def process_data(df_words, csv_results_file_path, not_found_file_path):
     with concurrent.futures.ThreadPoolExecutor() as executor:
         futures = []  # Store future results
         
-        for _, row in df_words.iloc[:100].iterrows():  
+        for _, row in df_words.iloc[:].iterrows():  
             futures.append(executor.submit(process_row, row, csv_results_file_path, not_found_file_path, processed_rows_in_memory, current_index))
         
         # Wait for all threads to complete and collect the results.
@@ -80,7 +80,10 @@ def find_dictionary_links(word):
     # nbhomograph: Ranks, from more popular to least, meaning of words.
 
     # Only perfect matches allowed.
-    df_response = df_response[df_response['score'] == '1.0']
+    try:
+        df_response = df_response[df_response['score'].astype(float) == 1]
+    except KeyError:
+        print(f"Word: {word} has no score parameter.")
 
     return df_response
 
@@ -94,10 +97,11 @@ def write_results(rows, csv_filepath):
 
     df = pd.concat(rows, ignore_index=True)
 
+    df = df.iloc[:, [5, 1, 4, 2, 0, 6, 7]]
+
     # Reformatting
 
     df = df.rename(columns={'url': 'Definition Url', 'nbhomograph': 'Nbhomograph', 'nature': 'Grammatical Function', 'Recording Url' : 'Sound Link', 'multiple_results' : 'Multiple Results'})
-    df = df.iloc[:, [4, 1, 3, 2, 0, 5, 6]]
     
     df.to_csv(csv_filepath, mode='a', header=False, index=False, encoding='utf-8')
 
