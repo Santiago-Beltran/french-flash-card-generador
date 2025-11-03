@@ -1,24 +1,17 @@
-Bonjour para toutes mon amis! 
+# Anki Flash Card Generator - French Vocabulary
 
-That's right, I don't know french.
+### Bonjour à toutes
+This French Flash Card Generator will automatically produce flashcards that can help you improve your vocabulary.
 
-I can fix it!
+### What does it include?
+- **10,000 of most commont French words**, based on a frequency list.
+- **Dictionary links** for each meaning, directing you to a French dicionary.
+- **Audio**: Each card has a default link to Forvo, a platform where native speakers upload their pronunciations. It also features a **clip_maker** that lets you extract audio easily to add to your cards where the word is said.
+- **IPA pronunciation:** Each word meaning includes its **International Phonetic Alphabet** transcription.
 
-There are 4 main components in any language:
-- Active:
-  - Speaking.
-  - Writing.
-- Passive:
-  - Listening.
-  - Reading.
 
-If I'm able to listen and read french to some extent, I'll learn to speak and write quicker.
-Besides this, I wish to understand more than to be understood.
+*« Le langage est source de malentendus. »*  
+> — *Le Petit Prince, Antoine de Saint-Exupéry* 
 
-So...
-
-Let's automatically generate Anki card decks that contain the pronunciation of the most 
-common words said by actual natives, including their IPA format!
-
-J-désirée à avoir succès!
+<img src="https://static.wixstatic.com/media/bca319_37a471bd97724ec381d1dee8b6d70c80~mv2_d_1347_1689_s_2.jpg/v1/fill/w_1000,h_1254,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/bca319_37a471bd97724ec381d1dee8b6d70c80~mv2_d_1347_1689_s_2.jpg" alt="My Photo" width="300">
 
