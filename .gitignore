@@ -1,0 +1,20 @@
+*.pyc
+.env
+.venv/
+Pipfile.lock
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Generated files
+src/french_card_generator/data/not_found.txt
+src/french_card_generator/data/results.csv
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+#Virtual Environments
+venv/
+env/
